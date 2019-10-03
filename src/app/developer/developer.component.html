@@ -1,0 +1,10 @@
+<div class="container">
+    <h1 class="display-4 mb-3">{{developer.firstName}} {{developer.lastName}}</h1>
+    <p>Age: {{developer.age}}</p>
+    <p>Sexe: {{developer.sexe}}</p>
+    <p>About me: {{developer.bio}}</p>
+</div>
+
+<div *ngFor="let skill of developer.skills"> <!-- skill recupere depuis skill.html   Pre chaque skill, faire apparaitre le component app-skill.html -->
+    <app-skill [skill]="skill"></app-skill>
+</div>
